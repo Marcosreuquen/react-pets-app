@@ -1,0 +1,81 @@
+.primary .svgwoosh .woosh:hover {
+  color: #ff9df5;
+}
+.primary {
+  all: unset;
+  background-color: #ff9df580;
+}
+.primary .woosh:hover rect {
+  background-color: #ff9df530;
+  stroke: #ff9df5;
+}
+
+.secondary .svgwoosh .woosh:hover {
+  color: #97ea9f;
+}
+.secondary .woosh:hover rect {
+  stroke: #97ea9f;
+}
+.secondary {
+  all: unset;
+  background-color: #97ea9f80;
+}
+
+.cancel .svgwoosh .woosh:hover {
+  color: #cdcdcd;
+}
+.cancel .woosh:hover rect {
+  stroke: #cdcdcd;
+}
+.cancel {
+  all: unset;
+  background-color: #cdcdcd80;
+}
+
+.svgwoosh .woosh {
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  display: block;
+  font-weight: 400;
+  line-height: 45px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+  background: #fafafa50;
+  font-weight: 100;
+  -webkit-transition: 0.3s ease-in-out all;
+  -moz-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+  color: #000;
+  text-shadow: 2px 2px #44444420;
+}
+.svgwoosh .woosh svg {
+  height: 45px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.svgwoosh .woosh rect {
+  fill: none;
+  stroke: #666;
+  stroke-width: 4;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.svgwoosh .woosh:hover {
+  background: rgba(255, 99, 71, 0);
+  letter-spacing: 1px;
+}
+.svgwoosh .woosh:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+}

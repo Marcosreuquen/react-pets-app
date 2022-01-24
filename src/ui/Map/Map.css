@@ -1,0 +1,27 @@
+@import "mapbox-gl/dist/mapbox-gl.css";
+
+.label {
+  height: 600px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mapContainer {
+  height: 360px;
+  max-width: 360px;
+}
+
+.sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+.mapboxgl-control-container {
+  display: none;
+}

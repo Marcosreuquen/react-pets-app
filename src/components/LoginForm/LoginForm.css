@@ -1,0 +1,17 @@
+.login {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+}
+.label {
+  width: 100%;
+}
+.input {
+  height: 45px;
+  width: 100%;
+}
