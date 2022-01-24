@@ -33,11 +33,7 @@ export function MyPets() {
         Mis mascotas reportadas
       </Text>
       <div className={css.petsContainer}>
-        {pets.length == 0 ? (
-          <Text type='body' style='regular'>
-            AUN NO REPORTASTE MASCOTAS PERDIDAS
-          </Text>
-        ) : (
+        {pets ? (
           _.map(pets, (pet) => {
             return (
               <PetCard
@@ -48,6 +44,10 @@ export function MyPets() {
               </PetCard>
             );
           })
+        ) : (
+          <Text type='body' style='regular'>
+            AUN NO REPORTASTE MASCOTAS PERDIDAS
+          </Text>
         )}
       </div>
     </div>

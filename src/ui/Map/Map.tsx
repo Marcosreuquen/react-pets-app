@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Text } from "../Texts/text";
-import { Button } from "../Buttons/button";
-import mapboxgl, { Marker } from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 import css from "./Map.css";
-import { useLinkClickHandler } from "react-router-dom";
 import { usePetData } from "hooks/hooks";
 
 const mapboxToken =
@@ -58,12 +56,12 @@ export function MyMap(props) {
       await fetch(
         "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
           query +
-          ".json?country=ar&types=place%2Caddress%2Clocality%2Cneighborhood%2Cregion%2Cdistrict&access_token=" +
+          ".json?country=ar&types=place%2Caddress%2Clocality%2Cneighborhood%2Cregion%2Cdistrict&postcode%2Cpoi&autocomplete=true&fuzzyMatch=true&routing=true&access_token=" +
           mapboxToken
       )
     ).json();
-    const longitude = features["0"].geometry.coordinates[0];
-    const latitude = features["0"].geometry.coordinates[1];
+    const longitude = features["0"]?.geometry.coordinates[0];
+    const latitude = features["0"]?.geometry.coordinates[1];
     map.current.setCenter([longitude, latitude]);
     //setea estado de acuerdo a la búsqueda
     setLng(longitude);
